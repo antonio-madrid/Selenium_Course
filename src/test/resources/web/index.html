@@ -1,0 +1,58 @@
+<html>
+      <head>
+          <title>Ejemplo</title>
+      </head>
+      <body>
+          <select id="listaCoches">
+              <option value="tesla">Tesla</option>
+              <option value="audi">Audi</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="bmw">BMW</option>
+          </select>
+          <select id="colores" multiple>
+            <option value="black">Black</option>
+            <option value="yellow">Yellow</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+        </select>
+        <div>
+        	<input type="radio" id="opcion1" name="opcion" value="mañana">Mañana
+            <input type="radio" id="opcion2" name="opcion" value="tarde" checked>
+        </div>
+        <div id="hobbies">
+              <input type="checkbox" id="hobby1" name="hobby" value="cine"><span>
+Cine</span>
+              <input type="checkbox" id="hobby2" name="hobby" value="musica">
+  <span>Musica</span>
+              <input type="checkbox" id="hobby3" name="hobby" value="series">
+  <span>Series</span>
+              <input type="checkbox" id="hobby4" name="hobby" value="tenis" checked
+  ><span>Tenis</span>
+          </div>
+          <div>
+              <input type="text" id="n1"> + <input type="text" id="n2">
+              <button type="button" id="btn-suma" onclick="calcular()">Calcular</button>
+              <span id="res"></span>
+          </div>
+          <script>
+          function saludar() {
+              alert('Hola mundo!!!');
+			}
+
+			setTimeout(() => {
+              var btn = document.createElement('button');
+              btn.setAttribute('type', 'button');
+              btn.setAttribute('id', 'btn-1');
+              btn.textContent = 'Pulsar';
+              document.getElementById('caja').appendChild(btn);
+          }, 4000);
+          
+          function calcular() {
+              let n1 = parseInt(document.getElementById('n1').value);
+              let n2 = parseInt(document.getElementById('n2').value);
+              let res = n1 + n2;
+              document.getElementById('res').innerText = res;
+			}
+      </script>
+      </body>
+</html>
